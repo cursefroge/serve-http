@@ -1,4 +1,15 @@
 #! /usr/bin/env node
-var shell = require('shelljs');
+const shell = require('shelljs');
+const yargs = require('yargs');
+// option of debug mode (--level debug)
 
-shell.echo('Goodbye world!');
+// get all arguments thru yargs
+const argv = yargs
+    .option('level', {
+        alias: 'l',
+        description: 'Set the log level',
+        type: 'string',
+    });
+
+// get all arguments thru yargs
+shell.echo(argv.level);
