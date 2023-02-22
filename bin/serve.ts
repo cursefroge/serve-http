@@ -1,15 +1,8 @@
 #! /usr/bin/env node
 const shell = require('shelljs');
-const yargs = require('yargs');
-// option of debug mode (--level debug)
+const yargs = require('yargs/yargs');
+const { hideBin } = require('yargs/helpers')
+const argv = yargs(hideBin(process.argv)).argv
 
-// get all arguments thru yargs
-const argv = yargs
-    .option('level', {
-        alias: 'l',
-        description: 'Set the log level',
-        type: 'string',
-    });
 
-// get all arguments thru yargs
 shell.echo(argv.level);
