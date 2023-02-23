@@ -1,7 +1,5 @@
 #! /usr/bin/env node
 
-import { NextFunction } from "express";
-
 const shell = require('shelljs');
 const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers')
