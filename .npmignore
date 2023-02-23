@@ -5,4 +5,5 @@ bin/
 .vs/
 .idea/
 tsconfig.json
+public/
 ```
