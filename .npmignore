@@ -7,4 +7,6 @@ bin/
 tsconfig.json
 .yarnclean
 public/
+tests/
+jest.config.js
 ```

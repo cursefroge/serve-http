@@ -1,11 +1,14 @@
 #! /usr/bin/env node
 
-const shell = require('shelljs');
+
+import shell from 'shelljs';
 const yargs = require('yargs/yargs');
-const { hideBin } = require('yargs/helpers')
+import { hideBin } from 'yargs/helpers';
 import express = require('express');
-const helmet = require('helmet');
-const log4js = require('log4js');
+import helmet from 'helmet';
+import log4js from 'log4js';
+
+
 
 const argv = yargs(hideBin(process.argv)).argv
 const logger = log4js.getLogger("serve");
@@ -42,8 +45,11 @@ if (argv.helmet) {
     logger.info('Helmet enabled');
 }
 
-
 app.listen(port, () => {
-    logger.info(`Server started`);
-    }
-);
+    logger.info(`Server started on port ${port}`);
+    })
+    .on('error', (err) => {
+        logger.error(`Server error: ${err.message}`);
+    });
+
+
