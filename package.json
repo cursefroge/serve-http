@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "serve": "dist/serve.js"
+    "serve": "dist/bin/serve.js"
   },
   "scripts": {
     "test": "jest",
     "build": "yarn tsc",
-    "start": "node dist/serve.js",
+    "start": "node dist/bin/serve.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/serve.js\""
   },
   "keywords": [],
