@@ -18,10 +18,10 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "figlet": "^1.5.2",
+    "figlet": "^1.6.0",
     "gradient-string": "^2.0.2",
     "helmet": "^6.1.5",
-    "inquirer": "^9.1.4",
+    "inquirer": "^9.1.5",
     "log4js": "^6.9.1",
     "shelljs": "^0.8.5",
     "yargs": "^17.7.0"
